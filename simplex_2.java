@@ -142,14 +142,13 @@ public class Simplex {
 				razao[0] = i ;
 				break;
 			}
-		}
-			System.out.println();	
+		}	
 		for(int i = 0 ; i < tam_tamanho_tablo[0]-1;i++ ) {   // comparaçoes
 			float divisor = tablo12[i][tam_tamanho_tablo[1]-1];
 			float dividendo = tablo12[i][coluna];
 			
 				if(dividendo <= 0) {
-					System.out.println("\ntem 1 q n pode\n");
+		
 				}else {
 					if((divisor/dividendo) < menor) {
 						menor = tablo12[i][tam_tamanho_tablo[1]-1]/tablo12[i][coluna];
@@ -162,8 +161,6 @@ public class Simplex {
 		String entra = "X"+ n_entra;
 		lista_base[razao[0]] = entra; // atualizar Bases
 		
-		System.out.println("linha: "+razao[0]+"\ncoluna: "+ razao[1]);
-		
 		return razao;
 	}
 	
@@ -171,7 +168,6 @@ public class Simplex {
 		float mat_resultado[][] = mat;
 		float vet_aux[] = new float[tam_tamanho_tablo[1]];
 		float[] vet_aux_padrao = new float[tam_tamanho_tablo[1]];
-		
 		
 		if(mat_resultado[pivor[0]][pivor[1]] != 1) {    // se o pivor nao for 1, dividir por ele mesmo para ficar 1
 			float divisor = mat_resultado[pivor[0]][pivor[1]] ;
@@ -296,12 +292,7 @@ public class Simplex {
 				cont++;
 			}
 		}
-		
 		lista_base = base;
-		System.out.println("\nDentro da Dentro:");
-		for(String f :lista_base) {
-			System.out.println(f);
-		}
 	}
 	
 	private void imprimirRelatorio() {

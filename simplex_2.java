@@ -6,13 +6,13 @@ public class Simplex {
 	private char vet_sinais[];
 	private String[] lista_base;
 	private int tam_mat_A[];   /// 0 - linha , 1 - coluna
-	private int fun_z[];       // funcao z
+	private float fun_z[];       // funcao z
 	private float tablo1[][];
 	private int tam_tamanho_tablo[];  /// 0 - linha , 1 -coluna
 	private int tipo;           // 0 - Minimizar,  1 - Maximizar
 	
 	
-	public Simplex( int tipo , int tam_mat_A[],float mat_A[][],float vet_B[],char vet_sinais[],int fun_z[]){
+	public Simplex( int tipo , int tam_mat_A[],float mat_A[][],float vet_B[],char vet_sinais[],float fun_z[]){
 		this.mat_A = mat_A;
 		this.vet_B = vet_B;
 		this.vet_sinais = vet_sinais;
